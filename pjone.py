@@ -1,6 +1,7 @@
 import pyautogui as p
 import time
-img = ['./img/chrome_l.png','./img/photo_l.png']
+img = ['./img/chrome.png','./img/chrome_l.png']
+img2= './img/photo_l.png'
 web = 'facebook.com'
 keyword = [
     "Why do programmers hate nature?\nIt has too many bugs.",
@@ -16,9 +17,12 @@ keyword = [
 ]
 def _doubleCick(image): #func double click
     klick = p.locateOnScreen(image)#If the file is not a png file it will not work
-    p.doubleClick(klick)
+    print(klick)
+    if klick != None:
+        p.doubleClick(klick)
 def _Cick(image):#func click
     klick = p.locateOnScreen(image)#If the file is not a png file it will not work
+    print(klick)
     p.click(klick)
 def _wp(url): #func open webpage
     time.sleep(1)
@@ -30,11 +34,12 @@ def _post(content): # func content post
     p.hotkey('ctrl','enter')
     time.sleep(10)
 # Start auto
+
 _doubleCick(img[0])
 _wp(web)
 time.sleep(2)
 for i in keyword:
-    _Cick(img[1])
+    _Cick(img2)
     _post(i)
 #close
 p.click(1910,10,button='left')
