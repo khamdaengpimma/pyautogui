@@ -1,6 +1,6 @@
 import pyautogui as p
 import time
-img = ['./img/chrome.png','./img/chrome_l.png']
+img = ['./img/chrome_b.png','./img/chrome_l.png']
 img2= './img/photo_l.png'
 web = 'facebook.com'
 keyword = [
@@ -41,5 +41,6 @@ time.sleep(2)
 for i in keyword:
     _Cick(img2)
     _post(i)
+    
 #close
 p.click(1910,10,button='left')
