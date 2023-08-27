@@ -1,9 +1,10 @@
 import pyautogui as p
 import time
-img = ['./img/chrome_b.png','./img/chrome_l.png']
+img = ['./img/chrome_00.png','./img/chrome_l.png']
 img2= './img/photo_l.png'
 web = 'facebook.com'
 keyword = [
+    "You had me at hello you know?\nYou Know i really love you",
     "Why do programmers hate nature?\nIt has too many bugs.",
     "Why do Java developers wear glasses?\nBecause they don't see sharp.",
     "Why do C# and Java developers keep breaking their keyboards?\nBecause they use a strongly typed language.",
@@ -14,10 +15,11 @@ keyword = [
     "Why do programmers always mix up Christmas and Halloween?\nBecause Oct 31 == Dec 25.",
     "Why don't programmers like nature documentaries?\nToo many bugs.",
     "Why did the programmer get thrown out of school?\nHe couldn't keep his classes together."
+    
 ]
 def _doubleCick(image): #func double click
     klick = p.locateOnScreen(image)#If the file is not a png file it will not work
-    print(klick)
+    print(p.click(klick))
     if klick != None:
         p.doubleClick(klick)
 def _Cick(image):#func click
@@ -32,7 +34,7 @@ def _post(content): # func content post
     time.sleep(1)
     p.write(content,interval=0.15)
     p.hotkey('ctrl','enter')
-    time.sleep(10)
+    time.sleep(5)
 # Start auto
 
 _doubleCick(img[0])
