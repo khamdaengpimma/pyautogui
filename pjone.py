@@ -1,6 +1,6 @@
 import pyautogui as p
 import time
-img = ['./img/chrome_00.png','./img/chrome_l.png']
+img = ['./img/chrome_3.png','./img/chrome_l.png']
 img2= './img/photo_l.png'
 web = 'facebook.com'
 keyword = [

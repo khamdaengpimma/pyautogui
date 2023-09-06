@@ -1,2 +1,2 @@
 from PIL import Image
-Image.open("photo.png").convert('L').save("photo_l.png")
+Image.open("./img/p.png").convert('L').save("./img/pp.png")

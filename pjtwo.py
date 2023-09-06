@@ -1,12 +1,13 @@
-import pyautogui as pui
-import time
-url = 'facebook.com'
-img = ['./img/chrome_00.png','./img/photo_l.png']
-local = pui.locateOnScreen(img[0])
-pui.doubleClick(local)
-time.sleep(0.5)
-pui.write(url,interval=0.15)
-pui.press('enter')
-time.sleep(2)
-local2 = pui.locateOnScreen(img[1])
-pui.click(local2)
+import pyautogui as p
+file_path = "svtable.txt"
+lines_list = []
+with open(file_path, 'r' ,encoding='utf-8') as file:
+    
+    for line in file:
+        lines_list.append(line.strip()+' Truong dai hoc Quang binh ') 
+
+print(lines_list)
+print(p.locateOnScreen('chrome_44.png'))
+b = p.locateOnScreen('chrome_44.png')
+print(b)
+
